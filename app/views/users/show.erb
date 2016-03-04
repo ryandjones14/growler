@@ -1,4 +1,8 @@
 <h1><%= @user.name %></h1>
 
 <h3>Growls</h3>
-<%= @user.growls.grr%>
+
+
+<% @user.each do |user| %>
+  <%= user.active.collect_column(:growls) %>
+<% end %>

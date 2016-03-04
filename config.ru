@@ -9,7 +9,9 @@ Dir["./app/models/*"].each {|file| require file }
 ActiveRecord::Base.establish_connection(
   adapter:  'postgresql',
   database: 'growler',
-  host:     'localhost'
+  host:     'localhost',
+# noble only
+  # password: 'nm'
 )
 
 use Rack::MethodOverride

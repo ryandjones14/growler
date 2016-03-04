@@ -49,3 +49,18 @@ input{
   -ms-transition: all 0.35s;
   transition: all 0.35s;
 }
+
+#form_growl {
+  float: left;
+  margin-left: 20%;
+  padding: 10px 25px;
+}
+
+.growls {
+  float: right;
+  margin-right: 20%;
+  padding: 10px 25px;
+}
+.growls h3 {
+  border-bottom: 1px solid #3E8760;
+}

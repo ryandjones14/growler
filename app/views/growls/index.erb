@@ -9,8 +9,11 @@
 
   <input type="submit" value="Growl at it">
 </form><br>
-
-<% @growls.each do |growl| %>
-  <p><a href="/growls/<%= growl.id %>">"<%= growl.grr %>"</a><br>
+<div class="growls">
+  <h3>Growls</h3>
+ <% @growls.each do |growl| %>
+    <p><a href="/growls/<%= growl.id %>">"<%= growl.grr %>"</a><br>
    <%= growl.user.name %></p>
-<% end %>
+  <% end %>
+</div>
+

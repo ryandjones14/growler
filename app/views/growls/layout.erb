@@ -7,6 +7,25 @@
     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/readable/bootstrap.min.css">
   </head>
   <body>
+
+    <nav>
+      <ul id="main">
+        <li>Growls</li>
+        <li>New Dog</li>
+        <li>Dog Pen
+          <ul class="drop">
+            <div>
+              <li>scss</li>
+              <li>jquery</li>
+              <li>html</li>
+            </div>
+          </ul>
+        </li>
+        <li>Contact</li>
+        <div id="marker"></div>
+      </ul>
+    </nav>
+
     <div class = 'container'>
       <%= yield %>
     </div>

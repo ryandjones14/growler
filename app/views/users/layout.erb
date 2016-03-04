@@ -3,18 +3,31 @@
   <head>
     <meta charset="utf-8">
     <title>Growler</title>
+
     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/readable/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
   </head>
+
   <body>
+
+    <nav>
+      <ul id="main">
+        <a href="/users/new"><li>New Growler</li></a>
+        <a href="/users"><li>Da Growlers</li></a>
+        <a href="/../growls"><li>Da Growls</li></a>
+      </ul>
+    </nav>
+
   <section id="nav_bar">
     <ul>
-      <a href="/users/new"><li>New Growler</li></a>
-      <a href="/users"><li>Da Growlers</li></a>
-      <a href="/../growls"><li>Da Growls</li></a>
     </ul>
   </section>
+
     <div class = 'container'>
       <%= yield %>
     </div>
+
   </body>
+
 </html>

@@ -1,5 +1,9 @@
 <h1>Welcome to Growler.</h1>
 
+<% @users.each do |user| %>
+  <% @name = user.name %>
+<% end %>
+
 <% @growls.each do |growl| %>
-  <p><%= growl.grr %></p>
+  <p><%= growl.grr %> --- <%= @name %></p>
 <% end %>

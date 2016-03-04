@@ -1,14 +1,13 @@
 class UsersController < ApplicationController
   set :views, Proc.new { File.join(root, "views/users")}
 
-get '/users' do
-  @users = User.all
-  erb :index
-end
+  get '/users' do
+    @users = User.all
+    erb :index
+  end
 
   post '/users' do
     user = User.new(params["user"])
-
     user.save
     redirect '/users'
   end
@@ -18,4 +17,9 @@ end
   end
 
 
+  get '/users/:id' do
+    @user = User.find(params["id"])
+
+    erb :show
+  end
 end

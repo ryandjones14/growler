@@ -2,8 +2,7 @@ class GrowlersController < ApplicationController
   set :views, Proc.new { File.join(root, "views/growls")}
 
   get '/growls' do
-    @growls = Growl.all
-    @users = User.all
+    @growls = Growl.all.order("id desc")
     erb :index
   end
 
@@ -13,8 +12,16 @@ class GrowlersController < ApplicationController
     redirect '/growls'
   end
 
-  get '/growls/new' do
-    erb :add_growl
+  get '/nope' do
+    erb :nope
   end
 
+  # get '/growls/new' do
+  #   erb :add_growl
+  # end
+
+  get '/growls/:id' do
+    @growl = Growl.find(params["id"])
+  erb :show
+  end
 end

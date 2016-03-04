@@ -1,9 +1,17 @@
 <h1>Welcome to Growler.</h1>
+<h6>we're like <a href="/nope" target="_blank">twitter</a>, but two characters better.</h6>
 
-<% @users.each do |user| %>
-  <% @name = user.name %>
-<% end %>
+<form name="form_growl" id="form_growl" action="/growls" method="post">
+  Growl:<br>
+  <input type="text" placeholder="you're the dog now, man!" name="growl[grr]"><br>
+  Big dog:<br>
+  <input type="text" placeholder="user id" name="growl[user_id]"><br>
+  <br>
+
+  <input type="submit" value="Growl at it">
+</form><br>
 
 <% @growls.each do |growl| %>
-  <p><%= growl.grr %> --- <%= @name %></p>
+  <p><a href="/growls/<%= growl.id %>"><%= growl.grr %></a><br>
+  <%= growl.user.name %></p>
 <% end %>

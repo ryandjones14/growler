@@ -18,19 +18,19 @@ body {
   text-transform: uppercase;
   display: inline-block;
   padding: 0;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 #main li {
-  font-size: 0.8rem;
+  font-size: 1.6rem;
   display: inline-block;
   position: relative;
-  padding: 15px 20px;
+  padding: 8px 10px;
   cursor: pointer;
   min-width: 120px;
 }
 
 li {
-  margin: 0;
+  margin: 30;
 }
 
 input{
@@ -49,4 +49,3 @@ input{
   -ms-transition: all 0.35s;
   transition: all 0.35s;
 }
-

@@ -11,7 +11,7 @@ ActiveRecord::Base.establish_connection(
   database: 'growler',
   host:     'localhost',
 # noble only
-  # password: 'nm'
+  password: 'nm'
 )
 
 use Rack::MethodOverride

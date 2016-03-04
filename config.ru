@@ -13,4 +13,5 @@ ActiveRecord::Base.establish_connection(
 )
 
 use Rack::MethodOverride
+use GrowlerController
 run ApplicationController

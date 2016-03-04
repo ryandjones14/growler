@@ -4,5 +4,5 @@
 
 
 <% @user.each do |user| %>
-  <%= user.active.collect_column(:growls) %>
+  <%= user.growls.grr %>
 <% end %>

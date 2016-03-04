@@ -11,6 +11,6 @@
 </form><br>
 
 <% @growls.each do |growl| %>
-  <p><a href="/growls/<%= growl.id %>"><%= growl.grr %></a><br>
-  <%= growl.user.name %></p>
+  <p><a href="/growls/<%= growl.id %>">"<%= growl.grr %>"</a><br>
+   <%= growl.user.name %></p>
 <% end %>
